@@ -6,8 +6,20 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
+ 
+- rule: su_st01
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: su_st01
+  - action: utter_welcome
+
+- rule: submit order form
+  condition:
+  - active_loop: order_form
+  steps:
+  - action: order_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_is_all
+  - intent: is_all
+  - action: utter_checkout

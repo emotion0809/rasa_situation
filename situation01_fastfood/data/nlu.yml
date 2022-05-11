@@ -1,6 +1,35 @@
 version: "3.1"
 
 nlu:
+- intent: su_st01
+  examples: |
+    - su_st01
+    - su_fastfood
+
+- intent: order_food
+  examples: |
+    - I would like to get a [double cheeseburger]{"entity": "burger"}.
+    - Hello, may I have a [double cheeseburger]{"entity": "burger"} ?
+    - A [double cheeseburger]{"entity": "burger"}  sounds good.
+    - Let me get some large [curly fries]{"entity": "fires"} .
+    - May I get a large order of [curly fries]{"entity": "fires"}?
+    - I would love large [curly fries]{"entity": "fires"}.
+    - Sure, how about a medium [Pepsi]{"entity": "drinks"}?
+    - Get me a medium [Pepsi]{"entity": "drinks"}.
+    - Yes, let me have a medium [Pepsi]{"entity": "drinks"}.
+
+- intent:  with_everything
+  examples: |
+    - I would like [everything]{"entity": "without"} on it, thank you.
+    - That sounds great.
+    - [Yes]{"entity": "without"}, please.
+
+- intent:  is_all
+  examples: |
+    - That'll be all. Thanks.
+    - No, thank you. That's it.
+    - Yeah, that's it. Thank you.
+
 - intent: greet
   examples: |
     - hey
