@@ -1,0 +1,80 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - su_st01
+  - order_food
+  - with_everything
+  - is_all
+
+responses:
+  utter_welcome:
+  - text: "Welcome, what would you like to order?"
+
+  utter_without:
+  - text: "With everything on it?"
+
+  utter_ask_fires:
+  - text: "Did you want fries with your order"
+
+  utter_ask_drinks:
+  - text: "Did you want something to drink?"
+
+  utter_is_all:
+  - text: "Would you like anything else?"
+
+  utter_checkout:
+  - text: "Your total comes to $5.48."
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+entities:
+- burger
+- fires
+- drinks
+
+slots:
+  fires:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: fires
+  drinks:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: drinks
+
+forms:
+  order_form:
+    required_slots:
+        - fires
+        - drinks
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

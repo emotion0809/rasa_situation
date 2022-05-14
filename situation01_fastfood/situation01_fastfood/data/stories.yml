@@ -1,0 +1,25 @@
+version: "3.1"
+stories:
+- story: order path
+  steps:
+  - intent: order_food
+  - action: utter_without
+  - intent: with_everything
+  - action: order_form
+  - active_loop: order_form
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: order path
+  steps:
+  - intent: order_food
+  - action: utter_without
+  - intent: with_everything
+  - action: order_form
+  - active_loop: order_form
+
