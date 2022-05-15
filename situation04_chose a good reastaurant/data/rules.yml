@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+- story: Choosing a Good Restaurant path
+  steps:
+  - intent: choosing_restaurant
+  - action: utter_A1
+  - intent: B1
+  - action: utter_A2
+  - intent: B2
+  - action: utter_A3
+  - intent: B3
+  - action: utter_A4
+  - intent: B4
+  - action: utter_A5
+  - intent: B5
+  - action: utter_A_end
+
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

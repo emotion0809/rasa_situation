@@ -1,0 +1,72 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - Ordering Appetizers
+  - utter_A1
+  - utter_A2
+  - utter_A3
+  - utter_A4
+  - utter_A5
+  - utter_A_end
+  - B1
+  - B2
+  - B3
+  - B4
+  - B5
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_A1:
+  - text: I am your waitress, Mary.
+  - text: My name is Mary, and I will be your waitress tonight.
+  - text: My name is Mary, and I will be your server this evening.
+  utter_A2:
+  - text: While you are looking over the menu, can I interest you in an appetizer?
+  - text: Before your main course, would you like to order an appetizer?
+  - text: Can I interest you in an appetizer to start out?
+  utter_A3:
+  - text: They are listed on the first page of the menu.
+  - text: There is a special appetizer menu right here in the center of the table.
+  - text: We have our daily appetizers listed on the board over there on the wall.
+  utter_A4:
+  - text: Yes, it is excellent!
+  - text: You know, that is one of my favorites!
+  - text: That would be a great choice!
+  utter_A5:
+  - text: Would you like to split that and choose another appetizer for half price to share?
+  - text: You could choose another appetizer for half price to share.
+  - text: We have a special where you can order a second appetizer for half price.
+  utter_A_end:
+  - text: "OK!"
+actions: []
+forms: {}
+e2e_actions: []
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,127 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: Ordering Main Entree
+  examples: |
+    - Ordering Main Entree
+
+- intent: B1
+  examples: |
+    - Yes, we are almost ready to order.
+    - I think that we have a pretty good idea of what we would like to order.
+    - This all looks good! I think we know what we want.
+
+- intent: B2
+  examples: |
+    - Oh, that all sounds so good! Can we get the sauce on the side?
+    - I was wondering if the chef could leave off the sauce.
+    - I am dieting, so could the chef prepare the food with no extra sauce?
+
+- intent: B3
+  examples: |
+    - I was wondering if you have any vegetarian choices.
+    - I am a vegetarian. Do you have any vegetarian selections?
+    - Could you tell me if there are any entrees that are vegetarian?
+
+- intent: B4
+  examples: |
+    - I think that I would like to order the broccoli noodles, please.
+    - I think that we will split the roasted vegetable and garlic pizza.
+    - I am going to go with the grilled shrimp with garlic sauce. I would like the garlic sauce on the side.
+
+- intent: B5
+  examples: |
+    - Please bring our salads to us now. We are hungry!
+    - You can bring us our salads when you bring us our entree.
+    - You can serve our salads with our dinner.
+    
+
