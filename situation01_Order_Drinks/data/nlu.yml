@@ -1,0 +1,165 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: order_drink
+  examples: |
+    - order drink
+- intent: request_list
+  examples: |
+    - Yes, do you have a wine list?
+    - Can you tell me where your wine list is?
+    - Where is your wine list?
+- intent: ask_do_you_have_this_drinks
+  examples: |
+    - Do you have [strong Ale](drinks.txt) in this restaurant?
+    - Do you have [cocktail](drinks.txt) in this restaurant?
+    - Do you have any [mixed drinks](drinks.txt) available here?
+    - do you have [wine](drinks.txt)
+    - Do you have [beer](drinks.txt) in this restaurant?
+    - Do you have [St.Estephe](drinks.txt) in this restaurant?
+    - Do you have [St.Julien](drinks.txt) in this restaurant?
+    - Do you have [verdillac](drinks.txt) in this restaurant?
+    - Do you have [medoc](drinks.txt) in this restaurant?
+    - Do you have [chateau coutet](drinks.txt) in this restaurant?
+    - Do you have [petit chapeau](drinks.txt) in this restaurant?
+    - Do you have [blue hawaii](drinks.txt) in this restaurant?
+    - Do you have [long island](drinks.txt) in this restaurant?
+    - Do you have [margarita](drinks.txt) in this restaurant?
+    - Do you have [bacardi](drinks.txt) in this restaurant?
+    - Do you have [martini](drinks.txt) in this restaurant?
+    - Do you have [cosmopolitan](drinks.txt) in this restaurant?
+    - Do you have [pale lager](drinks.txt) in this restaurant?
+    - Do you have [wheat beer](drinks.txt) in this restaurant?
+    - Do you have [brown  ale](drinks.txt) in this restaurant?
+    - Do you have [devastator](drinks.txt) in this restaurant?
+    - Do you have [lemonade](drinks.txt) in this restaurant?
+    - Do you have [iced tea](drinks.txt) in this restaurant?
+    - Do you have [orange juice](drinks.txt) in this restaurant?
+    - Do you have [strawberry juice](drinks.txt) in this restaurant?
+    - Do you have [smoothies](drinks.txt) in this restaurant?
+- intent: ask_recommend
+  examples: |
+    - I am not sure what I want. Do you have any house specials?
+    - Do you have any house specials that you could recommend?
+    - I heard that you are famous for your drinks. What are your specials?
+- intent: accept_recommend
+  examples: |
+    - That sounds good! Please bring me one of those.
+    - That sounds like a good choice for me. May I have one, please?
+    - I would love a margarita right now! That is what I am going to order.
+- intent: blended
+  examples: |
+    - I would like it [blended](blended_or_on_rock).
+- intent: on_rock
+  examples: |
+    - Please bring it to me on the [rock](blended_or_on_rock)s.
+    - I prefer my margarita on the [rock](blended_or_on_rock)s, please.
+- intent: no_salt
+  examples: |
+    - I would like my margarita with [no salt](salt_or_no_salt), thank you.
+    - [No salt](salt_or_no_salt), please.
+    - I would like it with [no salt](salt_or_no_salt), please.
+- intent: salt
+  examples: |
+    - I would like it with salt, please.
+- intent: order_drinks
+  examples: |
+    - give me one [medoc](drinks.txt).
+    - give me one [wheat](drinks.txt) [beer](drinks.txt).
+    - give me one [margarita](drinks.txt).
+    - yes,give me one
+- intent: want_some
+  examples: |
+    - Yes, please give me one.
+    - give me one.
+- intent: dont_want
+  examples: |
+    - No, I want other drinks.
+- lookup: drinks_type.txt
+  examples: |
+    - wine
+    - cocktail
+    - beer
+    - mixed drinks

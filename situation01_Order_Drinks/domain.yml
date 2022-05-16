@@ -1,0 +1,150 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- order_drink:
+    use_entities: true
+- request_list:
+    use_entities: true
+- ask_do_you_have_this_drinks:
+    use_entities: true
+- accept_recommend:
+    use_entities: true
+- ask_recommend:
+    use_entities: true
+- on_rock:
+    use_entities: true
+- blended:
+    use_entities: true
+- no_salt:
+    use_entities: true
+- salt:
+    use_entities: true
+- want_some:
+    use_entities: true
+- dont_want:
+    use_entities: true
+- utter_call_me:
+    use_entities: true
+- dont want:
+    use_entities: true
+- order_drinks:
+    use_entities: true
+entities:
+- blended_or_on_rock
+- salt_or_no_salt
+- drinks.txt
+slots:
+  blended_or_on_rock:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  salt_or_no_salt:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  drinks_type:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  tmp_drinks:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  drinks:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_intro:
+  - text: May I take your drink order while you are looking over your menu?
+  - text: While you are thinking about what you might like to order for dinner, would you like to order your drinks?
+  - text: Can I take your drink order?
+  utter_give_list:
+  - image: https://images.besttemplates.com/2428/Menu-BarMenuBackRevisiom-Charisse-0952017.jpg
+    text: The wine list is posted right there on the board.
+  utter_have_this_type:
+  - text: Yes, we have a full bar here.
+  - text: Yes, we have a wide selection of {drinks_type} available from our bar.
+  - text: We can make a number of {drinks_type} at our bar.
+  utter_recommend:
+  - text: Actually, we are famous for our {tmp_drinks}.
+  - text: Our most popular drinks are our {tmp_drinks}.
+  - text: Our house special is our {tmp_drinks}.
+  utter_ask_blended_or_on_rock:
+  - text: Would you like that drink blended or on the rocks?
+  - text: Can I bring that to you on the rocks, or would you like it blended?
+  - text: Can I prepare your drink on the rocks, or would you prefer it blended?
+  utter_ask_salt_or_no_salt:
+  - text: Would you like it with salt or no salt?
+  - text: Salt or no salt?
+  - text: Do you like your margarita with salt or no salt?
+  utter_have_this_drinks:
+  - text: We have {tmp_drinks}.Would you want Some?
+  utter_call_me:
+  - text: Ok, you can call me, when you decide what you want to order.
+actions:
+- action_check_order
+- action_have_this_drinks
+- action_check_menu
+- action_order_drinks
+- action_recommend
+- action_accept_recommend
+forms:
+  drinks_form:
+    required_slots:
+      blended_or_on_rock:
+      - intent: blended
+        type: from_intent
+        value: true
+      - intent: on_rock
+        type: from_intent
+        value: false
+      salt_or_no_salt:
+      - intent: salt
+        type: from_intent
+        value: true
+      - intent: no_salt
+        type: from_intent
+        value: false
+e2e_actions: []
