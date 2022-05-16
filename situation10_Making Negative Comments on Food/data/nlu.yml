@@ -1,0 +1,127 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: Making Negative Comments on Food
+  examples: |
+    - Making Negative Comments on Food
+
+- intent: B1
+  examples: |
+    - My chicken tastes all right, but it is pretty dry. How is your fish?
+    - It tastes great, but it is really dry. Is your fish all right?
+    - The chicken tastes wonderful, but it is kind of dry. Is your fish OK?
+
+- intent: B2
+  examples: |
+    - It's almost as if this food has been sitting a little too long. It doesn't seem fresh.
+    - I wonder if they left it sitting around too long before they served it.
+    - It seems as if they got busy and left it sitting before it got to us.
+
+- intent: B3
+  examples: |
+    - How are your vegetables?
+    - Are your vegetables OK?
+    - Are your vegetables a little mushy?
+
+- intent: B4
+  examples: |
+    - Mine are the same way. It seems like they've been overcooked.
+    - So are mine. I think they left them cooking too long.
+    - Mine aren't so good, either.
+
+- intent: B5
+  examples: |
+    - I agree. Maybe they can bring us some better food.
+    - I think that you are right. Maybe they can give us a free dessert or something.
+    - I think that we should let someone know. They will probably want to fix the problem.
+    
+

@@ -1,0 +1,127 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: Making Positive Comments on Food
+  examples: |
+    - Making Positive Comments on Food
+
+- intent: B1
+  examples: |
+    - Thank you. I am glad that you are enjoying it.
+    - Thank you. I am glad that everything turned out so well.
+    - Thanks. I was hoping that you would all enjoy this meal.
+
+- intent: B2
+  examples: |
+    - I grew up cooking. My mother shared her recipes with me.
+    - I took a cooking class at the Culinary Institute.
+    - I got a really wonderful cookbook for my birthday and decided to try out a few of the recipes.
+
+- intent: B3
+  examples: |
+    - That is a special coconut ginger chicken with rice dish.
+    - Isn't that great? That is coconut ginger chicken with rice.
+    - I love that dish as well. It is coconut chicken with rice.
+
+- intent: B4
+  examples: |
+    - Yes, do you like it? I added a little extra lemon grass and some sea vegetables.
+    - Yes, there is shrimp in there along with sea vegetables and lemon grass.
+    - Yes, that soup has a shrimp base. I also added sea vegetables and lemon grass.
+
+- intent: B5
+  examples: |
+    - Yes, thank you for bringing the wine. It really complements the meal.
+    - I appreciate you bringing the wine. It goes well with the chicken.
+    - I love this wine! It goes very well with the chicken.
+    
+

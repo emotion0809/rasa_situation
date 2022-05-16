@@ -1,0 +1,46 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Choosing a Good Restaurant path
+  steps:
+  - intent: choosing_restaurant
+  - action: utter_A1
+  - intent: B1
+  - action: utter_A2
+  - intent: B2
+  - action: utter_A3
+  - intent: B3
+  - action: utter_A4
+  - intent: B4
+  - action: utter_A5
+  - intent: B5
+  - action: utter_A_end
+

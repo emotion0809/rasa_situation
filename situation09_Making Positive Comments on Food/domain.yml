@@ -1,0 +1,86 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- Making Positive Comments on Food:
+    use_entities: true
+- utter_A1:
+    use_entities: true
+- utter_A2:
+    use_entities: true
+- utter_A3:
+    use_entities: true
+- utter_A4:
+    use_entities: true
+- utter_A5:
+    use_entities: true
+- utter_A_end:
+    use_entities: true
+- B1:
+    use_entities: true
+- B2:
+    use_entities: true
+- B3:
+    use_entities: true
+- B4:
+    use_entities: true
+- B5:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_A1:
+  - text: What a wonderful dinner!
+  - text: This is a great meal!
+  - text: I really love this meal.
+  utter_A2:
+  - text: Where did you get your fantastic recipes?
+  - text: Who taught you how to cook this well?
+  - text: Where did you learn to cook these amazing dishes?
+  utter_A3:
+  - text: I especially like the wonderful chicken dish.
+  - text: Wow, what is in this chicken dish?
+  - text: The chicken is out of this world!
+  utter_A4:
+  - text: Is that shrimp in the soup?
+  - text: Is the soup a shrimp soup?
+  - text: I was wondering if there was shrimp in the soup.
+  utter_A5:
+  - text: I am happy that the wine I brought for you works well with this meal.
+  - text: I think I got lucky in choosing a wine that blends with this meal.
+  - text: It worked out well that the wine that I brought to share seems to blend well with this meal.
+  utter_A_end:
+  - text: OK!
+actions: []
+forms: {}
+e2e_actions: []

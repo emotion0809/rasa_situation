@@ -1,0 +1,94 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- Being Seated at the Restaurant:
+    use_entities: true
+- utter_A1:
+    use_entities: true
+- utter_A2:
+    use_entities: true
+- utter_A3:
+    use_entities: true
+- utter_A4:
+    use_entities: true
+- utter_A5:
+    use_entities: true
+- utter_A6:
+    use_entities: true
+- utter_A_end:
+    use_entities: true
+- B1:
+    use_entities: true
+- B2:
+    use_entities: true
+- B3:
+    use_entities: true
+- B4:
+    use_entities: true
+- B5:
+    use_entities: true
+- B6:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_A1:
+  - text: Good evening, sir, and welcome to Chez Attitude.
+  - text: Welcome to our restaurant, Chez Attitude!
+  - text: Thank you for joining us this evening at Chez Attitude.
+  utter_A2:
+  - text: Yes, Mr. Foster, if you would please be seated over in the waiting area, our hostess will be with you in a moment.
+  - text: Yes, Mr. Foster, our hostess will be with you in just a moment.
+  - text: Welcome, Mr. Foster, if you would have a seat in the lounge area, our hostess will be ready to seat you in just a moment.
+  utter_A3:
+  - text: Of course, I will tell her.
+  - text: I will let her know where you are.
+  - text: She will come and let you know when your table is prepared.
+  utter_A4:
+  - text: Sure, if you would like one of those tables, I could seat you right away.
+  - text: I could seat you right away at an outside table if you would like.
+  - text: An outside table is available right now if you would like to be seated immediately.
+  utter_A5:
+  - text: Here are your menus and the wine menu, and would you like to order your drinks now?
+  - text: Can I start you off with some cocktails while you are looking over the menu?
+  - text: Here is your table, and now may I take your drink order while you are considering what to have for dinner?
+  utter_A6:
+  - text: Sure, no problem, sir.
+  - text: I'll get on that right away!
+  - text: I'll put your drink order in and be right back to get your dinner order.
+  utter_A_end:
+  - text: OK!
+actions: []
+forms: {}
+e2e_actions: []

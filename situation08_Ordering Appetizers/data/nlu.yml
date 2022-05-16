@@ -1,0 +1,127 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: Ordering Appetizers
+  examples: |
+    - Ordering Appetizers
+
+- intent: B1
+  examples: |
+    - Hello, Mary. We are all pretty hungry tonight!
+    - Thank you, Mary. We have been looking forward to trying out this restaurant.
+    - Hi Mary. We are really looking forward to a great meal here.
+
+- intent: B2
+  examples: |
+    - An appetizer sounds good. Do you have a special menu?
+    - Sure, that sounds great. Where are your appetizers listed?
+    - I would love an appetizer. Are they listed in the menu?
+
+- intent: B3
+  examples: |
+    - The coconut shrimp looks good. Have you ever had that?
+    - The chicken and cheese quesadilla looks good. Is that pretty good?
+    - I am thinking about the popcorn shrimp. How is that?
+
+- intent: B4
+  examples: |
+    - Good, I'll take that then.
+    - OK, I'll take one order of that.
+    - I'll trust your taste and take one order of that.
+
+- intent: B5
+  examples: |
+    - Good. In that case, we'll also take an order of onion rings. Thank you!
+    - Perfect! Please add on an order of onion rings.
+    - In that case, we'll take an order of onion rings with our first choice.
+    
+

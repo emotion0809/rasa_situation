@@ -1,0 +1,86 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- Making Negative Comments on Food:
+    use_entities: true
+- utter_A1:
+    use_entities: true
+- utter_A2:
+    use_entities: true
+- utter_A3:
+    use_entities: true
+- utter_A4:
+    use_entities: true
+- utter_A5:
+    use_entities: true
+- utter_A_end:
+    use_entities: true
+- B1:
+    use_entities: true
+- B2:
+    use_entities: true
+- B3:
+    use_entities: true
+- B4:
+    use_entities: true
+- B5:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_A1:
+  - text: George, how is your chicken?
+  - text: George, is your chicken OK?
+  - text: Does your chicken taste all right?
+  utter_A2:
+  - text: My fish is pretty dry too.
+  - text: My fish is very dry.
+  - text: My fish has good seasoning but is a little dry.
+  utter_A3:
+  - text: Yes, it seems that way to me also.
+  - text: That's exactly what I was thinking had happened.
+  - text: Yes, maybe they are short-handed in the kitchen tonight.
+  utter_A4:
+  - text: My vegetables are very soggy.
+  - text: The vegetables are kind of mushy.
+  - text: The vegetables seem to not be very fresh.
+  utter_A5:
+  - text: I don't usually complain, but I think that we should mention this to the waiter.
+  - text: The food here is usually good, so I think that we should tell the waiter that there is a problem.
+  - text: I usually enjoy the meals here, so I think that we should tell the waiter that there is something wrong with this meal.
+  utter_A_end:
+  - text: OK!
+actions: []
+forms: {}
+e2e_actions: []

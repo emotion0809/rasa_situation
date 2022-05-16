@@ -1,0 +1,86 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- choosing_restaurant:
+    use_entities: true
+- utter_A1:
+    use_entities: true
+- utter_A2:
+    use_entities: true
+- utter_A3:
+    use_entities: true
+- utter_A4:
+    use_entities: true
+- utter_A5:
+    use_entities: true
+- utter_A_end:
+    use_entities: true
+- B1:
+    use_entities: true
+- B2:
+    use_entities: true
+- B3:
+    use_entities: true
+- B4:
+    use_entities: true
+- B5:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_A1:
+  - text: Devi, have you thought about where would you like to go to dinner on Friday for your birthday?
+  - text: Devi, do you have any preference for where you would like to go for dinner for your birthday?
+  - text: Devi, do you have a favorite place that you would like to go to for your birthday dinner?
+  utter_A2:
+  - text: You know, we could look online at the local Internet sites.
+  - text: There is a great restaurant directory here in the weekend section of the newspaper.
+  - text: I've got a great guidebook here of local restaurants.
+  utter_A3:
+  - text: What kind of food would you like for your birthday?
+  - text: Do you have a particular type of food that you would like?
+  - text: What is your favorite type of restaurant food?
+  utter_A4:
+  - text: This one, Shogun, looks good.
+  - text: That Japanese restaurant, Shogun, got good reviews.
+  - text: Shogun looks pretty good!
+  utter_A5:
+  - text: Would you like to go there then?
+  - text: Would that be a place that you might like to go to for your birthday?
+  - text: Would that be a good choice for your birthday dinner then?
+  utter_A_end:
+  - text: OK!
+actions: []
+forms: {}
+e2e_actions: []
