@@ -1,0 +1,60 @@
+version: "2.0"
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- rule: Submit form cake
+  condition:
+  - active_loop: CakeSplitRequire_form
+  steps:
+  - action: CakeSplitRequire_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: Drinks_form
+  - active_loop: Drinks_form
+- rule: Submit form investigate
+  condition:
+  - active_loop: Investigate_form
+  steps:
+  - action: Investigate_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: DessertOrder_form
+  - active_loop: DessertOrder_form
+- rule: Submit form dessertOrder
+  condition:
+  - active_loop: DessertOrder_form
+  steps:
+  - action: DessertOrder_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: CakeSplitRequire_form
+  - active_loop: CakeSplitRequire_form
+- rule: Submit form drink
+  condition:
+  - active_loop: Drinks_form
+  steps:
+  - action: Drinks_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_annoce_result
+  - action: CheckResult_form
+  - active_loop: CheckResult_form
+- rule: Submit form drink
+  condition:
+  - active_loop: CheckResult_form
+  steps:
+  - action: CheckResult_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_comfirm
