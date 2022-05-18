@@ -1,0 +1,83 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- request_restaurant:
+    use_entities: true
+entities: []
+slots:
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ds1:
+  - text: did you enjoy your meal?
+  - text: So how was your meal?
+  - text: Did your meal meet with your approval?
+  utter_ds2:
+  - text: May I interest you in some dessert?
+  - text: Would you like to finish your evening with us with some dessert?
+  - text: How about a dessert to top off that wonderful meal?
+  utter_ds3:
+  - text: We have chocolate mousse cake, and a spicy rum apple crisp for our specials.
+  - text: Tonight's dessert specials include chocolate mousse cake, and a spicy rum apple crisp.
+  - text: On this evening's dessert list, we have chocolate mousse cake, and a spicy rum apple crisp.
+  utter_ds4:
+  - text: Since there are four of you, would you like to split a second dessert?
+  - text: That is a good choice, but would you like to split a second dessert for the four of you?
+  - text: One dessert will serve two, so would you like to split a second one?
+  utter_ds5:
+  - text: Would you like coffee or tea with your dessert?
+  - text: Can I bring you some coffee or tea with your dessert?
+  - text: How about some coffee and tea with your dessert?
+  utter_ds6:
+  - text: OK. I will be right back with your desserts and drinks.
+  - text: I will put your dessert order in and be right back with your drinks.
+  - text: I will prepare your desserts and have someone bring you your drinks right away.
+  utter_bmit:
+  - text: good to mot
+actions:
+- restaurant_form
+- action_youtube
+forms:
+  order_drink:
+    required_slots:
+      cuisine:
+      - entity: cuisine
+        type: from_entity
+      num_people:
+      - entity: number
+        type: from_entity
+e2e_actions: []

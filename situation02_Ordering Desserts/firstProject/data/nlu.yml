@@ -1,0 +1,136 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: ds_re1
+  examples: |
+    - Yes, we really enjoyed it.
+    - Our meal was wonderful!
+    - Our meal was absolutely perfect!
+    - yes i did
+- intent: ds_re2
+  examples: |
+    - Yes, that sounds great.
+    - I am full, but maybe we could split a few desserts.
+    - Dessert sounds perfect, but I would like to split something with my friends.
+- intent: ds_re3
+  examples: |
+    - The [pancake](DessertList.txt) sounds great.
+    - I would love the [lolipop](DessertList.txt)
+    - I think that the [apple crisp](DessertList.txt) would be wonderful.
+- intent: spcake_affirm
+  examples: |
+    - Good suggestion. Could you please bring us a chocolate mousse cake and four dessert forks, please?
+    - Add in a chocolate mousse cake and we're good. We will also need four dessert forks, please.
+    - We would also like a piece of chocolate mousse cake. Could you bring us four dessert forks, please?
+- intent: ds_re5
+  examples: |
+    - Let's have four coffees, please.
+    - We would like two coffees and two teas.
+    - We are all tea drinkers. Please bring us four teas.
+- intent: ds_re6
+  examples: |
+    - Thank you! We have really enjoyed our meal here.
+    - Thanks, and may we have our check when you come back? We have theater tickets and need to leave soon.
+    - The hot drinks first would be great. Thanks!
+- intent: ds_op
+  examples: |
+    - ds
+- intent: spcake_deny
+  examples: |
+    - no need to worry,we could handle that
+    - thanks,but that's good enough for us
+    - good suggestion,but no
+- lookup: DessertList.txt
+  examples: |
+    - apple crisp
+    - chocolate cake
+    - lolipop
+    - donut
+    - pancake
+    - french fries
+    - capcake
+    - pudding
+    - jelly
+    - ice cream

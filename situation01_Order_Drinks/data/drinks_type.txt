@@ -1,0 +1,4 @@
+wine
+cocktail
+beer
+mixed drinks

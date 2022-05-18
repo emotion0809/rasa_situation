@@ -1,0 +1,185 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ds_op:
+    use_entities: true
+- ds_re1:
+    use_entities: true
+- ds_re2:
+    use_entities: true
+- ds_re3:
+    use_entities: true
+- ds_re4:
+    use_entities: true
+- ds_re5:
+    use_entities: true
+- ds_re6:
+    use_entities: true
+- spcake_affirm:
+    use_entities: true
+- spcake_deny:
+    use_entities: true
+- check_negi:
+    use_entities: true
+- check_nagi:
+    use_entities: true
+entities:
+- DessertList
+- DrinkList
+slots:
+  split_cake:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  invest_mood:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  invest_dessert:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  comfirm:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  order_dessert:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  order_drink:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_invest_mood:
+  - text: Did you enjoy your meal?
+  - text: So how was your meal?
+  - text: Did your meal meet with your approval?
+  utter_ask_invest_dessert:
+  - text: May I interest you in some dessert?
+  - text: Would you like to finish your evening with us with some dessert?
+  - text: How about a dessert to top off that wonderful meal?
+  utter_ask_order_dessert:
+  - text: We have chocolate mousse cake, and a spicy rum apple crisp for our specials.
+  - text: Tonight's dessert specials include chocolate mousse cake, and a spicy rum apple crisp.
+  - text: On this evening's dessert list, we have chocolate mousse cake, and a spicy rum apple crisp.
+  utter_ask_split_cake:
+  - text: Since there are four of you, would you like to split a second dessert?
+  - text: That is a good choice, but would you like to split a second dessert for the four of you?
+  - text: One dessert will serve two, so would you like to split a second one?
+  utter_ask_order_drink:
+  - text: Would you like coffee or tea with your dessert?
+  - text: Can I bring you some coffee or tea with your dessert?
+  - text: How about some coffee and tea with your dessert?
+  utter_ds6:
+  - text: OK. I will be right back with your desserts and drinks.
+  - text: I will put your dessert order in and be right back with your drinks.
+  - text: I will prepare your desserts and have someone bring you your drinks right away.
+  utter_CakeSplitAffirmed:
+  - text: Got it,I will make it split later.
+  utter_CakeSplitDenied:
+  - text: I see,I wouldn't spilt the cake.
+  utter_ask_comfirm:
+  - text: Is there any problem with the order?
+  utter_comfirm_nagative:
+  - text: Sorry for the mistake,could you repeat the order?
+  utter_comfirm_positive:
+  - text: Thanks for the purchasing, your meal will be here right away.
+  - text: Thanks for the purchasing, OK. I will be right back with your desserts and drinks.
+  - text: Thanks for the purchasing, I will put your dessert order in and be right back with your drinks.
+  - text: Thanks for the purchasing, I will prepare your desserts and have someone bring you your drinks right away.
+actions:
+- CakeSplit_form
+- restaurant_form
+- action_wheatherSplit
+- action_annoce_result
+- action_comfirm
+forms:
+  Investigate_form:
+    required_slots:
+      invest_dessert:
+      - intent: ds_re2
+        type: from_intent
+        value: true
+      - intent: deny
+        type: from_intent
+        value: false
+      invest_mood:
+      - intent: ds_re1
+        type: from_intent
+        value: true
+      - intent: deny
+        type: from_intent
+        value: false
+  Drinks_form:
+    required_slots:
+      order_drink:
+      - entity: DrinkList
+        type: from_entity
+  DessertOrder_form:
+    required_slots:
+      order_dessert:
+      - entity: DessertList
+        type: from_entity
+  CakeSplitRequire_form:
+    required_slots:
+      split_cake:
+      - intent: spcake_affirm
+        type: from_intent
+        value: true
+      - intent: deny
+        type: from_intent
+        value: false
+  CheckResult_form:
+    required_slots:
+      comfirm:
+      - intent: affirm
+        type: from_intent
+        value: true
+      - intent: deny
+        type: from_intent
+        value: false
+e2e_actions: []
